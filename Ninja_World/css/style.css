@@ -12,40 +12,129 @@
    ========================================================================== */
 
 html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+  color: #222;                 /* Sets default text color for the whole document (dark gray). 
+                                  Alternatives: named colors (e.g. 'black'), RGB (rgb(34,34,34)), HSL (hsl(0,0%,13%)). */
+  font-size: 1em;              /* Sets base font size relative to browser default (usually 16px). 
+                                  Alternatives: px (absolute), %, rem (root-relative), or larger keywords (e.g. small, large). */
+  line-height: 1.4;            /* Controls vertical spacing between lines (140% of font size).
+                                  Alternatives: unitless (recommended), px, em. */
 }
+
 body {
-  background-color: #222;
-  margin: 20px;
+  background-color: #222;      /* Background color of the page (dark gray).
+                                  Alternatives: gradients, images (background-image:url()), or transparent. */
+  margin: 20px;                /* Space outside the body element (all sides). 
+                                  Alternatives: margin-top/right/bottom/left for individual control. */
 }
 
 h1 {
-  color:darkred;
-  font-size: 2.5em;
-  font-weight: bold;
-  font-style: italic;
-  text-decoration: underline;
-  text-align: center;
-  line-height: 1.2;
-  margin-bottom: 0.6em;
+  color: darkred;              /* Text color for <h1>. Alternatives: any valid CSS color value. */
+  font-size: 2.5em;            /* Makes <h1> 2.5 times larger than the parent font size. 
+                                  Alternatives: px for fixed sizing, rem for root-relative. */
+  font-weight: bold;           /* Makes text bold. Alternatives: normal, lighter, or numeric values (100–900). */
+  font-style: italic;          /* Italicizes text. Alternatives: normal, oblique. */
+  text-decoration: underline;  /* Adds underline. Alternatives: none, overline, line-through, or wavy styles. */
+  text-align: center;          /* Centers text horizontally. Alternatives: left, right, justify. */
+  line-height: 1.2;            /* Reduces spacing between lines in multi-line titles. */
+  margin-bottom: 0.6em;        /* Space after <h1>. Alternatives: px, rem, or using margin shorthand. */
 }
 
 .brief-intro {
-  color:coral;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-align: center;
-  margin-bottom: 20px;
+  color: coral;                /* Coral text color. */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+                               /* Defines fallback fonts in order of preference. 
+                                  Alternatives: sans-serif stack, monospace, system fonts. */
+  font-weight: bold;           /* Bold text. */
+  font-size: 1.2em;            /* Slightly larger than base font size. */
+  text-align: center;          /* Centers paragraph text. */  
+  margin-bottom: 20px;         /* Adds space below intro text. */
 }
+
+.button {
+  display: flex;               /* Makes button container a flexbox (for centering). */
+  justify-content: center;     /* Centers button within its container (flexbox property). */
+  align-items: center;         /* Vertically centers button (flexbox property). */
+  text-align: center;          /* Centers button container. */
+  margin-bottom: 20px;         /* Adds space below button. */
+}
+
+.learn-more {
+  margin: center;                               /* Centers button horizontally (works with block display). */
+  padding: 13px 10px;                           /* Adds space inside button (top/bottom 13px, left/right 10px). */
+  font-size: 1.2em;                             /* Makes button text slightly larger. */
+  font-weight: bold;                            /* Bold button text. */
+  font-family: Georgia, 'Times New Roman', Times, serif;    /* Sets button font stack. */
+  border-radius: 20px;                          /* Rounds button corners. Alternatives: px, em, %, or 0 for sharp corners. */
+  background-color: lightgrey;              /* Light grey background color. Alternatives: gradients, images, etc. */
+}
+
+.set {
+  display: flex;               /* Turns element into a flex container for flexible layout. 
+                                  Alternatives: block, inline-block, grid, inline-flex. */
+  align-items: center;         /* Vertically aligns items (center of flex container’s cross-axis). */
+  justify-content: space-between; 
+                               /* Distributes items with space between them. 
+                                  Alternatives: flex-start, flex-end, center, space-around, space-evenly. */
+  margin: 20px;                /* Space outside the container. */
+  padding: 20px;               /* Space inside the container (between border and content). */
+  border: 1px solid #999;      /* Adds a light gray border. Alternatives: dashed, dotted, double, or border shorthand. */
+}
+
+.set .subtitle, .set .description {
+  flex: auto;                     /* Each takes equal available space. Alternatives: flex-grow/shrink/basis for fine control. */
+  padding-right: 20px;         /* Adds space to the right of text so it doesn’t touch images. */
+}
+
+.set .ninja-img1 {
+  flex-shrink: 0;              /* Prevents image from shrinking when container is tight. */
+  width: 40%;                  /* Image takes 40% of container width. Alternatives: px, em, auto. */
+  height: 40%;                 /* Image takes 40% of container height (can distort if not proportional). 
+                                  Alternatives: auto (keeps aspect ratio), max-width. */
+}
+
+.content {
+  display: flex;               /* Makes content a flexbox row by default. */
+  flex-direction: column;         /* Explicitly sets horizontal layout. Alternatives: column, row-reverse, column-reverse. */
+}
+
+.ninja-img0 {
+  display: block;              /* Removes inline spacing (default for <img> is inline). */
+  margin: 0 auto;              /* Centers image horizontally (works with block display). */
+  width: 40%;                  /* Image width is 30% of parent container. */
+  height: 40%;                 /* Height is also 30% (might distort). Alternatives: auto for aspect ratio. */
+}
+
 .ninja-img1 {
-  display: block;
-  margin: 0 auto;
-  width: 20%;
-  height: 20%;
+  float: right;                /* Pushes image to right, allowing text to wrap around it. 
+                                  Alternatives: left, none, inline-flex, or flex-based layouts. */
+  display: block;              /* Makes image block-level (to work with margin:auto). */
+  margin: 0 auto;              /* Centers horizontally (though float:right overrides this). */
+  width: 30%;                  /* Scales image to 40% of container width. */
+  height: 30%;                 /* Scales image height (could distort). */
 }
+
+.subtitle {
+  color: lightgreen;           /* Sets subtitle text color. */
+  float: left;                 /* Pushes element to the left. 
+                                  Alternatives: right, none (or flex/grid instead). */
+  font-size: 1.5em;            /* 1.5 times larger than parent font size. */
+  font-weight: normal;         /* Normal thickness (not bold). */
+  font-style: italic;          /* Italic text. */
+  text-align: left;            /* Aligns text to the left (default for most elements). */
+  line-height: 1.2;            /* Slightly tighter vertical spacing. */
+  margin-bottom: 0.6em;        /* Space below the element. */
+}
+
+.description {
+  color: lime;                 /* Bright green text. */
+  font-family: Arial, Helvetica, sans-serif; 
+                               /* Sans-serif font stack, common for body text. */
+  font-size: 1em;              /* Standard size (same as parent’s size). */
+  text-align: justify;         /* Spreads text evenly across line (newspaper style). 
+                                  Alternatives: left, right, center, start, end. */
+  margin-bottom: 20px;         /* Adds space below description. */
+}
+
 
 
 /*
