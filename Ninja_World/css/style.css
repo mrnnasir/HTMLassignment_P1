@@ -16,6 +16,37 @@ html {
   font-size: 1em;
   line-height: 1.4;
 }
+body {
+  background-color: #222;
+  margin: 20px;
+}
+
+h1 {
+  color:darkred;
+  font-size: 2.5em;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 0.6em;
+}
+
+.brief-intro {
+  color:coral;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.ninja-img1 {
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+  height: 20%;
+}
+
 
 /*
  * Remove text-shadow in selection highlight:
