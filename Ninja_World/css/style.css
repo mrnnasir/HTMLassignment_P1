@@ -12,7 +12,7 @@
    ========================================================================== */
 
 html {
-  color: #222;                 /* Sets default text color for the whole document (dark gray). 
+  color: #222;               /* Sets default text color for the whole document (dark gray). 
                                   Alternatives: named colors (e.g. 'black'), RGB (rgb(34,34,34)), HSL (hsl(0,0%,13%)). */
   font-size: 1em;              /* Sets base font size relative to browser default (usually 16px). 
                                   Alternatives: px (absolute), %, rem (root-relative), or larger keywords (e.g. small, large). */
@@ -23,12 +23,12 @@ html {
 body {
   background-color: #222;      /* Background color of the page (dark gray).
                                   Alternatives: gradients, images (background-image:url()), or transparent. */
-  margin: 20px;                /* Space outside the body element (all sides). 
+  margin: 20px;                  /* Space outside the body element (all sides). 
                                   Alternatives: margin-top/right/bottom/left for individual control. */
 }
 
 h1 {
-  color: darkred;              /* Text color for <h1>. Alternatives: any valid CSS color value. */
+  color: darkred;            /* Text color for <h1>. Alternatives: any valid CSS color value. */
   font-size: 2.5em;            /* Makes <h1> 2.5 times larger than the parent font size. 
                                   Alternatives: px for fixed sizing, rem for root-relative. */
   font-weight: bold;           /* Makes text bold. Alternatives: normal, lighter, or numeric values (100–900). */
